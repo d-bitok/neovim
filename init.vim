@@ -59,6 +59,10 @@ if &term =~ "screen"
   autocmd VinLeave * silent! exe '!echo -n "\ek[`hostname`;`basenane $PWD`]\e\\"'
 endif
 
+" au BufnewFile,BufRead *.jsx setf typescriptreact
+" au BufnewFile,BufRead *.jsx setf javascriptreact
+au BufnewFile,BufRead *.js setf javascript
+au BufnewFile,BufRead *.jsx setf javascript
 au BufnewFile,BufRead *.es6 setf javascript
 au BufnewFile,BufRead *.tsx setf typescriptreact
 au BufnewFile,BufRead *.md set filetype=markdown 
@@ -118,6 +122,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'mattn/emmet-vim'
+Plug 'hrsh7th/nvim-compe'
+Plug 'anott03/nvim-lspinstall'
 
 call plug#end()
 
